@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV Autopilot — Your job search, on autopilot</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233b;--line:#2a3652;--text:#f4f7ff;--muted:#aab6ce;--accent:#7c9cff;--green:#53d6a0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#1a2c56 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1050px;margin:auto;padding:28px 20px 60px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:56px}.brand{font-weight:800;font-size:20px;letter-spacing:-.5px}.brand span{color:var(--accent)}.pill{border:1px solid var(--line);border-radius:99px;padding:7px 12px;color:var(--muted);font-size:12px}
+.hero{max-width:760px;margin-bottom:34px}.eyebrow{color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800}.hero h1{font-size:clamp(36px,6vw,60px);line-height:1.03;letter-spacing:-2px;margin:14px 0}.hero p{color:var(--muted);font-size:18px;max-width:650px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.panel{background:rgba(18,26,45,.94);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 18px 55px #0002}.panel h2{margin:0 0 5px;font-size:19px}.sub{color:var(--muted);font-size:14px;margin:0 0 22px}
+.upload{border:1.5px dashed #52658e;border-radius:15px;padding:25px 16px;text-align:center;background:#0e172a;cursor:pointer}.upload:hover{border-color:var(--accent)}.upload .symbol{font-size:30px}.upload strong{display:block;margin:6px 0}.upload small{color:var(--muted)}input[type=file]{display:none}
+label{display:block;color:#d8e0f2;font-size:13px;margin:18px 0 7px}input[type=text],input[type=number],select{width:100%;border:1px solid var(--line);border-radius:10px;background:#0b1324;color:var(--text);padding:12px;font:inherit;outline:none}input:focus,select:focus{border-color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.checks{display:flex;flex-wrap:wrap;gap:8px}.check{background:#0d1628;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:13px;color:#d9e3f8}.check input{accent-color:var(--accent);margin-right:6px}
+.btn{display:block;width:100%;border:0;border-radius:12px;background:var(--accent);color:#081126;font-weight:800;font-size:15px;padding:14px;margin-top:22px;cursor:pointer}.btn:hover{filter:brightness(1.08)}.btn.secondary{background:#202d49;color:var(--text);border:1px solid var(--line);margin-top:10px}
+.status{display:flex;gap:12px;align-items:center;padding:13px;background:#0d1728;border:1px solid var(--line);border-radius:12px;margin:16px 0}.dot{width:10px;height:10px;background:var(--green);border-radius:50%;box-shadow:0 0 12px #53d6a066}.status small{display:block;color:var(--muted)}
+.steps{display:grid;gap:12px}.step{display:flex;gap:12px;align-items:flex-start}.num{width:29px;height:29px;flex:none;display:grid;place-items:center;border-radius:9px;background:#25375d;color:#b8caff;font-weight:800;font-size:13px}.step strong{display:block;font-size:14px}.step span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.results{display:none;margin-top:18px}.job{padding:15px 0;border-bottom:1px solid var(--line)}.job:last-child{border:0}.jobtop{display:flex;justify-content:space-between;gap:12px}.job h3{font-size:15px;margin:0}.job p{font-size:13px;color:var(--muted);margin:4px 0}.match{color:var(--green);font-size:12px;font-weight:800;white-space:nowrap}.note{font-size:12px;color:var(--muted);margin-top:20px;border-top:1px solid var(--line);padding-top:15px}
+footer{color:#7f8ba5;text-align:center;font-size:12px;margin-top:28px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.nav{margin-bottom:38px}.panel{padding:19px}.hero p{font-size:16px}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="nav"><div class="brand">✦ CV <span>AUTOPILOT</span></div><div class="pill">YOUR JOB SEARCH HQ</div></div>
+<section class="hero"><div class="eyebrow">Less searching. More opportunity.</div><h1>Your next job.<br><span style="color:var(--accent)">Without the grind.</span></h1><p>Upload your CV, set the kind of work you want, and let your job search start with a smarter shortlist.</p></section>
+<div class="grid">
+<section class="panel">
+<h2>1. Set up your search</h2><p class="sub">Start with your CV and a few basics.</p>
+<label for="cv">Your CV</label><label class="upload" for="cv"><div class="symbol">↥</div><strong id="fileTitle">Choose your CV file</strong><small id="fileSub">PDF or Word document · stored only in this demo page</small></label><input id="cv" type="file" accept=".pdf,.doc,.docx,.txt">
+<label for="roles">Job titles or roles</label><input id="roles" type="text" placeholder="e.g. warehouse, driver, admin, customer service">
+<div class="two"><div><label for="location">Location</label><input id="location" type="text" placeholder="e.g. Stockport"></div><div><label for="radius">Travel distance</label><select id="radius"><option>5 miles</option><option selected>10 miles</option><option>20 miles</option><option>30 miles</option><option>Remote / anywhere</option></select></div></div>
+<div class="two"><div><label for="type">Work type</label><select id="type"><option>Any suitable work</option><option>Full-time</option><option>Part-time</option><option>Remote</option><option>Temporary</option><option>Contract</option></select></div><div><label for="salary">Minimum salary (£ per year)</label><input id="salary" type="number" min="0" placeholder="e.g. 24000"></div></div>
+<label>Anything to prioritise?</label><div class="checks"><label class="check"><input type="checkbox" value="remote">Remote-friendly</label><label class="check"><input type="checkbox" value="flexible">Flexible hours</label><label class="check"><input type="checkbox" value="no experience">No experience required</label><label class="check"><input type="checkbox" value="entry level">Entry-level roles</label></div>
+<button class="btn" id="start">Build my job shortlist →</button>
+</section>
+<aside>
+<section class="panel"><h2>How Autopilot works</h2><p class="sub">The goal: one setup, less repetitive work.</p>
+<div class="steps">
+<div class="step"><div class="num">1</div><div><strong>Read your CV</strong><span>Identify your experience, skills and qualifications.</span></div></div>
+<div class="step"><div class="num">2</div><div><strong>Find matching vacancies</strong><span>Compare roles, location, salary and requirements.</span></div></div>
+<div class="step"><div class="num">3</div><div><strong>Prepare tailored applications</strong><span>Adapt your CV and supporting answers honestly for each role.</span></div></div>
+<div class="step"><div class="num">4</div><div><strong>Track every application</strong><span>Keep a record of where you applied and what happens next.</span></div></div></div>
+<div class="status"><div class="dot"></div><div><strong>Designed for low-effort job hunting</strong><small>One dashboard, not a dozen tabs.</small></div></div>
+</section>
+<section class="panel results" id="results"><h2>Your search setup</h2><p class="sub">Your preferences are ready to use.</p><div id="summary"></div><button class="btn secondary" id="copy">Copy my search brief</button><div class="note">This page is a front-end prototype. It does not yet search live job boards, upload your CV to a server, or submit applications. Those features require a secure backend and authorised job-board/employer integrations.</div></section>
+</aside></div>
+<footer>CV Autopilot · Prototype · Your CV is not uploaded anywhere by this demo page.</footer>
+</main>
+<script>
+const cv=document.getElementById('cv');let selectedFile='';
+cv.addEventListener('change',()=>{selectedFile=cv.files[0]?.name||'';document.getElementById('fileTitle').textContent=selectedFile||'Choose your CV file';document.getElementById('fileSub').textContent=selectedFile?'Selected on this device — not uploaded':'PDF or Word document · stored only in this demo page';});
+function brief(){const roles=document.getElementById('roles').value.trim()||'Suitable roles based on my CV';const location=document.getElementById('location').value.trim()||'Not specified';const radius=document.getElementById('radius').value;const type=document.getElementById('type').value;const salary=document.getElementById('salary').value;const priorities=[...document.querySelectorAll('.check input:checked')].map(x=>x.value);return `CV AUTOPILOT JOB SEARCH\\nCV file: ${selectedFile||'Not selected'}\\nRoles: ${roles}\\nLocation: ${location}\\nTravel distance: ${radius}\\nWork type: ${type}\\nMinimum salary: ${salary?'£'+Number(salary).toLocaleString()+' per year':'Not specified'}\\nPriorities: ${priorities.join(', ')||'None specified'}`;}
+document.getElementById('start').addEventListener('click',()=>{document.getElementById('summary').innerHTML='<div class="job"><div class="jobtop"><h3>Roles</h3><span class="match">SET</span></div><p>'+escapeHtml(document.getElementById('roles').value.trim()||'Suitable roles based on my CV')+'</p></div><div class="job"><div class="jobtop"><h3>Location & travel</h3><span class="match">SET</span></div><p>'+escapeHtml(document.getElementById('location').value.trim()||'Not specified')+' · '+escapeHtml(document.getElementById('radius').value)+'</p></div><div class="job"><div class="jobtop"><h3>Work & pay preferences</h3><span class="match">SET</span></div><p>'+escapeHtml(document.getElementById('type').value)+' · '+(document.getElementById('salary').value?'£'+Number(document.getElementById('salary').value).toLocaleString()+'+':'Salary not specified')+'</p></div><div class="note">'+(selectedFile?'CV selected: '+escapeHtml(selectedFile)+'.':'No CV selected yet.')+' This demo has saved no data and has not contacted any employer.</div>';document.getElementById('results').style.display='block';document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});});
+document.getElementById('copy').addEventListener('click',async()=>{const b=document.getElementById('copy');try{await navigator.clipboard.writeText(brief());b.textContent='Copied ✓';}catch(e){const ta=document.createElement('textarea');ta.value=brief();document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();b.textContent='Copied ✓';}setTimeout(()=>b.textContent='Copy my search brief',1800);});
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+</script></body></html>
